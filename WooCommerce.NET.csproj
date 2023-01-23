@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>WooCommerceNET</PackageId>
+    <Version>0.8.5</Version>
+    <Authors>JamesYang@NZ</Authors>
+    <Company>JamesYang@NZ</Company>
+    <Description>A .NET Wrapper for WooCommerce/WordPress REST API</Description>
+    <Copyright>Copyright ©  2015 - 2023 James Yang@NZ</Copyright>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/XiaoFaye/WooCommerce.NET</PackageProjectUrl>
+    <PackageReleaseNotes>WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API in .NET applications.
+
+GitHub: https://github.com/XiaoFaye/WooCommerce.NET
+Changes Doc: https://github.com/XiaoFaye/WooCommerce.NET/blob/master/Changes.md
+
+* v0.8.5 update
+  1. Change all id field to 64bit integer (unsigned long) to prevent overflow. #560
+  2. Add WCCustomerItem for get customer by email endpoint.
+  3. Escape all querystrings.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>0.8.5.0</AssemblyVersion>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.key.snk</AssemblyOriginatorKeyFile>
+    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <FileVersion>0.8.5.0</FileVersion>
+    <PackageTags>WooCommerce Wordpress Restful API</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RestClient.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="License.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
